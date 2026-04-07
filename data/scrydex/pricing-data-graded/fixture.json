@@ -1,0 +1,199 @@
+{
+  "prices": [
+    {
+      "grade": "10",
+      "company": "PSA",
+      "is_perfect": false,
+      "is_signed": false,
+      "is_error": false,
+      "type": "graded",
+      "low": 6450.1,
+      "mid": 14702.96,
+      "high": 34770.0,
+      "market": 15552.4,
+      "currency": "USD",
+      "trends": {
+        "days_1": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_7": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_14": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_30": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_90": {
+          "price_change": 9357.5,
+          "percent_change": 51.91
+        },
+        "days_180": {
+          "price_change": 5206.25,
+          "percent_change": 29.75
+        }
+      }
+    },
+    {
+      "grade": "9",
+      "company": "PSA",
+      "is_perfect": false,
+      "is_signed": false,
+      "is_error": false,
+      "type": "graded",
+      "low": 3000.0,
+      "mid": 3290.0,
+      "high": 3600.0,
+      "market": 3250.6,
+      "currency": "USD",
+      "trends": {
+        "days_1": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_7": {
+          "price_change": 49.21,
+          "percent_change": 1.46
+        },
+        "days_14": {
+          "price_change": 214.48,
+          "percent_change": 6.76
+        },
+        "days_30": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_90": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_180": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        }
+      }
+    },
+    {
+      "grade": "8",
+      "company": "PSA",
+      "is_perfect": false,
+      "is_signed": false,
+      "is_error": false,
+      "type": "graded",
+      "low": 1050.0,
+      "mid": 1237.49,
+      "high": 1351.0,
+      "market": 1236.4,
+      "currency": "USD",
+      "trends": {
+        "days_1": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_7": {
+          "price_change": 77.6,
+          "percent_change": 6.48
+        },
+        "days_14": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_30": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_90": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_180": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        }
+      }
+    },
+    {
+      "grade": "7",
+      "company": "PSA",
+      "is_perfect": false,
+      "is_signed": false,
+      "is_error": false,
+      "type": "graded",
+      "low": 601.01,
+      "mid": 715.0,
+      "high": 775.0,
+      "market": 705.83,
+      "currency": "USD",
+      "trends": {
+        "days_1": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_7": {
+          "price_change": 73.42,
+          "percent_change": 10.78
+        },
+        "days_14": {
+          "price_change": 16.51,
+          "percent_change": 2.37
+        },
+        "days_30": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_90": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_180": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        }
+      }
+    },
+    {
+      "grade": "6",
+      "company": "PSA",
+      "is_perfect": false,
+      "is_signed": false,
+      "is_error": false,
+      "type": "graded",
+      "low": 449.0,
+      "mid": 486.5,
+      "high": 550.0,
+      "market": 496.23,
+      "currency": "USD",
+      "trends": {
+        "days_1": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_7": {
+          "price_change": -8.67,
+          "percent_change": -1.73
+        },
+        "days_14": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_30": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_90": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        },
+        "days_180": {
+          "price_change": 0.0,
+          "percent_change": 0.0
+        }
+      }
+    }
+  ]
+}
