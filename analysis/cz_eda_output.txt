@@ -1,0 +1,218 @@
+=== Missing values in df_model ===
+price        1
+grade        0
+grade_pop    0
+total_pop    0
+log_price    1
+dtype: int64
+
+=== Missing values in df_pop ===
+price        1
+grade        0
+grade_pop    0
+total_pop    0
+log_price    1
+dtype: int64
+
+=== Summary by card ===
+                           num_sales  avg_price  median_price  min_price  max_price  avg_grade
+card                                                                                          
+Altaria                           45      39.28         19.60       5.50     125.00       9.16
+Arceus VSTAR                     100     184.81        131.00      29.99     400.00       8.56
+Cynthia's Ambition               104      39.44         23.25       5.50     114.99       8.60
+Darkrai VSTAR                     88     137.06         69.99       9.38     375.00       8.97
+Deoxys                            80      72.59         25.99       6.51     299.99       8.91
+Deoxys VMAX                       89      79.35         52.00       9.50     179.99       8.84
+Deoxys VSTAR                      95      69.91         36.00      10.00     199.99       8.88
+Ditto                             74      93.19         35.00       4.25     350.00       9.12
+Entei V                           83      88.16         51.00      11.50     200.00       8.92
+Gardenia's Vigor                  40      45.43         44.50       5.50     110.27       9.45
+Giratina VSTAR                   103     292.57        222.50      40.00     620.00       8.46
+Glaceon VSTAR                     99      73.89         49.99      14.78     169.95       8.69
+Hisuian Samurott V                57      45.52         39.31       9.50     108.99       9.42
+Hisuian Samurott VSTAR            52      43.45         51.50       6.50      89.85       9.53
+Hisuian Zoroark VSTAR             86      57.26         36.50       4.25     165.00       9.02
+Keldeo                            71      70.82         34.41       1.75     200.00       9.17
+Lapras                            93      57.89         25.00       5.00     180.00       8.77
+Latias                            79      76.54         27.00       3.25     216.50       9.06
+Leafeon VSTAR                     91      95.74         68.11      12.50     202.00       8.87
+Lumineon V                        68      55.62         28.62       8.99     143.56       9.20
+Magmortar                         61      64.02         26.00       8.50     149.99       9.25
+Mew                              102     157.33         68.92       5.00     561.00       8.52
+Mewtwo VSTAR                     101     289.25        245.50      26.00     620.00       8.67
+Miltank                           47      66.47         26.95      10.50     196.69       9.24
+Origin Forme Dialga VSTAR        101     145.64         99.95      16.50     399.99       8.56
+Origin Forme Palkia VSTAR         97     135.75         85.00      25.00     335.00       8.64
+Pikachu                          185     124.79         54.00       5.50     449.97       8.74
+Raikou V                          88      88.77         50.00      11.50     222.68       8.80
+Regigigas VSTAR                   87      44.45         24.99       7.50     114.66       8.97
+Riolu                             53      28.75         17.50       5.50     119.99       8.75
+Simisear VSTAR                    88      55.45         31.00       5.50     136.88       8.89
+Suicune V                         95      97.47         54.99      10.50     294.11       8.67
+Turtwig                           62      45.83         20.40       6.25     200.00       8.87
+Zacian V                          87      48.36         29.00       4.25     115.50       8.98
+Zamazenta V                       86      40.30         25.00       7.50      97.00       8.92
+Zeraora VMAX                      70      39.79         25.12       5.50      86.66       9.21
+Zeraora VSTAR                     66      43.58         30.42       5.50     121.79       9.33
+
+=== Model 1: log_price ~ grade ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.341
+Model:                            OLS   Adj. R-squared:                  0.341
+Method:                 Least Squares   F-statistic:                     1587.
+Date:                Mon, 27 Apr 2026   Prob (F-statistic):          3.61e-280
+Time:                        01:48:23   Log-Likelihood:                -3845.5
+No. Observations:                3073   AIC:                             7695.
+Df Residuals:                    3071   BIC:                             7707.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -0.7586      0.121     -6.263      0.000      -0.996      -0.521
+grade          0.5390      0.014     39.840      0.000       0.513       0.566
+==============================================================================
+Omnibus:                      334.353   Durbin-Watson:                   0.247
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              702.331
+Skew:                           0.678   Prob(JB):                    3.10e-153
+Kurtosis:                       4.910   Cond. No.                         71.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== Model 2: log_price ~ grade + total_pop ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.612
+Model:                            OLS   Adj. R-squared:                  0.612
+Method:                 Least Squares   F-statistic:                     2419.
+Date:                Mon, 27 Apr 2026   Prob (F-statistic):               0.00
+Time:                        01:48:23   Log-Likelihood:                -3031.8
+No. Observations:                3073   AIC:                             6070.
+Df Residuals:                    3070   BIC:                             6088.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -1.9854      0.097    -20.539      0.000      -2.175      -1.796
+grade          0.6082      0.010     57.971      0.000       0.588       0.629
+total_pop   3.547e-05   7.66e-07     46.299      0.000     3.4e-05     3.7e-05
+==============================================================================
+Omnibus:                      746.137   Durbin-Watson:                   0.456
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7932.871
+Skew:                           0.841   Prob(JB):                         0.00
+Kurtosis:                      10.689   Cond. No.                     1.92e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.92e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+=== Model 3: log_price ~ grade + grade_pop ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.565
+Model:                            OLS   Adj. R-squared:                  0.565
+Method:                 Least Squares   F-statistic:                     1995.
+Date:                Mon, 27 Apr 2026   Prob (F-statistic):               0.00
+Time:                        01:48:23   Log-Likelihood:                -3206.1
+No. Observations:                3073   AIC:                             6418.
+Df Residuals:                    3070   BIC:                             6436.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.7769      0.106      7.352      0.000       0.570       0.984
+grade          0.3148      0.012     25.488      0.000       0.291       0.339
+grade_pop      0.0001   2.58e-06     39.808      0.000    9.75e-05       0.000
+==============================================================================
+Omnibus:                      379.823   Durbin-Watson:                   0.345
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              721.131
+Skew:                           0.790   Prob(JB):                    2.56e-157
+Kurtosis:                       4.770   Cond. No.                     6.01e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.01e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+=== Model 4: log_price ~ grade + C(card) ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.755
+Model:                            OLS   Adj. R-squared:                  0.752
+Method:                 Least Squares   F-statistic:                     252.3
+Date:                Mon, 27 Apr 2026   Prob (F-statistic):               0.00
+Time:                        01:48:23   Log-Likelihood:                -2326.9
+No. Observations:                3073   AIC:                             4730.
+Df Residuals:                    3035   BIC:                             4959.
+Df Model:                          37                                         
+Covariance Type:            nonrobust                                         
+========================================================================================================
+                                           coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                               -2.5123      0.110    -22.861      0.000      -2.728      -2.297
+C(card)[T.Arceus VSTAR]                  2.0504      0.093     21.968      0.000       1.867       2.233
+C(card)[T.Cynthia's Ambition]            0.4028      0.093      4.342      0.000       0.221       0.585
+C(card)[T.Darkrai VSTAR]                 1.2780      0.095     13.430      0.000       1.091       1.465
+C(card)[T.Deoxys]                        0.5417      0.097      5.599      0.000       0.352       0.731
+C(card)[T.Deoxys VMAX]                   1.0050      0.095     10.578      0.000       0.819       1.191
+C(card)[T.Deoxys VSTAR]                  0.7056      0.094      7.508      0.000       0.521       0.890
+C(card)[T.Ditto]                         0.6985      0.098      7.117      0.000       0.506       0.891
+C(card)[T.Entei V]                       0.9807      0.096     10.201      0.000       0.792       1.169
+C(card)[T.Gardenia's Vigor]              0.0412      0.113      0.365      0.715      -0.180       0.263
+C(card)[T.Giratina VSTAR]                2.5792      0.093     27.744      0.000       2.397       2.761
+C(card)[T.Glaceon VSTAR]                 1.0666      0.093     11.417      0.000       0.883       1.250
+C(card)[T.Hisuian Samurott V]            0.1378      0.104      1.330      0.184      -0.065       0.341
+C(card)[T.Hisuian Samurott VSTAR]        0.0318      0.106      0.300      0.764      -0.176       0.239
+C(card)[T.Hisuian Zoroark VSTAR]         0.5276      0.096      5.523      0.000       0.340       0.715
+C(card)[T.Keldeo]                        0.4936      0.099      4.989      0.000       0.300       0.688
+C(card)[T.Lapras]                        0.4598      0.094      4.874      0.000       0.275       0.645
+C(card)[T.Latias]                        0.5307      0.097      5.473      0.000       0.341       0.721
+C(card)[T.Leafeon VSTAR]                 1.1997      0.095     12.676      0.000       1.014       1.385
+C(card)[T.Lumineon V]                    0.3840      0.100      3.849      0.000       0.188       0.580
+C(card)[T.Magmortar]                     0.4119      0.102      4.037      0.000       0.212       0.612
+C(card)[T.Mew]                           1.3987      0.093     15.029      0.000       1.216       1.581
+C(card)[T.Mewtwo VSTAR]                  2.4048      0.093     25.821      0.000       2.222       2.587
+C(card)[T.Miltank]                       0.3822      0.108      3.530      0.000       0.170       0.595
+C(card)[T.Origin Forme Dialga VSTAR]     1.7788      0.093     19.088      0.000       1.596       1.961
+C(card)[T.Origin Forme Palkia VSTAR]     1.6771      0.094     17.889      0.000       1.493       1.861
+C(card)[T.Pikachu]                       1.2022      0.086     13.920      0.000       1.033       1.372
+C(card)[T.Raikou V]                      1.1045      0.095     11.602      0.000       0.918       1.291
+C(card)[T.Regigigas VSTAR]               0.2858      0.095      2.998      0.003       0.099       0.473
+C(card)[T.Riolu]                        -0.0834      0.105     -0.792      0.429      -0.290       0.123
+C(card)[T.Simisear VSTAR]                0.5146      0.095      5.407      0.000       0.328       0.701
+C(card)[T.Suicune V]                     1.1724      0.094     12.467      0.000       0.988       1.357
+C(card)[T.Turtwig]                       0.2417      0.102      2.376      0.018       0.042       0.441
+C(card)[T.Zacian V]                      0.3486      0.095      3.656      0.000       0.162       0.536
+C(card)[T.Zamazenta V]                   0.2620      0.096      2.742      0.006       0.075       0.449
+C(card)[T.Zeraora VMAX]                  0.0797      0.099      0.803      0.422      -0.115       0.274
+C(card)[T.Zeraora VSTAR]                 0.1152      0.100      1.148      0.251      -0.082       0.312
+grade                                    0.6367      0.009     74.717      0.000       0.620       0.653
+==============================================================================
+Omnibus:                     1618.350   Durbin-Watson:                   0.740
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            37523.735
+Skew:                           2.000   Prob(JB):                         0.00
+Kurtosis:                      19.645   Cond. No.                         457.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== Model comparison ===
+                           model  n_obs  r_squared  adj_r_squared
+0              log_price ~ grade   3073     0.3407         0.3405
+1  log_price ~ grade + total_pop   3073     0.6118         0.6115
+2  log_price ~ grade + grade_pop   3073     0.5652         0.5649
+3    log_price ~ grade + C(card)   3073     0.7546         0.7516
+
+=== Saved plots ===
+avg_price_by_card.png
+grade_vs_price.png
+grade_pop_vs_price.png

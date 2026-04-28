@@ -8,12 +8,12 @@ import statsmodels.formula.api as smf
 # File paths
 BASE_DIR = Path(__file__).parent.parent
 
-data_path = BASE_DIR / "data" / "mock-data" / "final_mock_cards.csv"
+data_path = BASE_DIR / "data" / "mock-data" / "cz_updated_populations.csv"
 
 output_dir = BASE_DIR / "analysis" / "plots"
 output_dir.mkdir(parents=True, exist_ok=True)
 
-output_path = BASE_DIR / "analysis" / "eda_output.txt"
+output_path = BASE_DIR / "analysis" / "cz_eda_output.txt"
 
 # Helper function to save or show plots based on backend
 def render_plot(filename: str) -> None:
